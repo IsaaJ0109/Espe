@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Template Name: PhotoTeam
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>PhotoTeam</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    $('.photo_category').showFeatureText();
+    $(".thumbs a").click(function () {
+        var imgpath = $(this).attr("href");
+        var imgalt = $(this).attr("alt");
+        $("#placeholder").attr({
+            src: imgpath,
+            alt: imgalt
+        });
+        return false;
+    });
+});
+$.fn.showFeatureText = function () {
+    return this.each(function () {
+        var box = $(this);
+        var text = $('span', this);
+        text.css({
+            display: 'block',
+            position: 'absolute',
+            top: '0',
+            left: '0'
+        }).hide();
+        box.hover(function () {
+            text.slideDown("fast");
+        }, function () {
+            text.slideUp("fast");
+        });
+    });
+}
+</script>
+</head>
+<body id="top">
+<div class="wrapper col1">
+  <div id="header" class="clear">
+    <div class="fl_left">
+      <h1><a href="index.html">DeliCookies</a></h1>
+      <p>Las mejores galletas en Colombia</p>
+    </div>
+    <div class="fl_right">
+      <form action="#" method="post" id="search">
+        <fieldset>
+          <legend>Site Search</legend>
+          <input type="text" value="&hellip;" onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
+          <input type="image" id="go" src="layout/images/search.gif" alt="Search" />
+        </fieldset>
+      </form>
+      <ul id="topnav" class="clear">
+        <li><a href="pages/gallery.html">Galeria</a></li>
+        <li><a href="pages/portfolio.html">Variedades semanales</a></li>
+        <li><a href="#">Since</a>
+          <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+          </ul>
+        </li>
+        <li><a href="pages/full-width.html">Sabores</a></li>
+        <li><a href="pages/style-demo.html">Nuestra Marca</a></li>
+        <li class="active last"><a href="index.html"> ¿Quienes Somos?</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col2">
+  <div id="homepage" class="clear">
+    <p><img id="placeholder" src="images/demo/Jomi.jpg.jpeg" alt="" /></p>
+    <div class="fl_right">
+      <h2>Recuerdos</h2>
+      <ul class="thumbs">
+        <li><a href="images/demo/1.gif"><img src="images/demo/carops.jpeg" alt="" /></a></li>
+        <li><a href="images/demo/2.gif"><img src="images/demo/sofilinda.jpeg" alt="" /></a></li>
+        <li><a href="images/demo/3.gif"><img src="images/demo/crumbl ijc.jpg" alt="" /></a></li>
+        <li class="last"><a href="images/demo/4.gif"><img src="images/demo/Pulgui.jpeg" alt="" /></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col3">
+  <div id="container" class="clear"> 
+    <!-- ####################################################################################################### -->
+    <div id="hpage_services" class="clear">
+      <ul>
+        <li class="photo_category"><span>vvvvvvv</span><a href="#"><img src="images/demo/All.jpg.jpeg" alt="" /></a></li>
+        <li class="photo_category"><span>Photo Category 2</span><a href="#"><img src="images/demo/juli.jpeg"   width="290" height="120" alt="" /></a></li>
+        <li class="photo_category last"><span>Photo Category 3</span><a href="#"><img src="images/demo/juan.jpeg" width="290" height="120" alt="" /></a></li>
+      </ul>
+    </div>
+    <div id="hpage_info" class="clear">
+      <div class="fl_left">
+        <h2 class="title">Nacidos como un proyecto de Colegio, destinados a ser los mejores</h2>
+        <p>Conoce como estas famosas gelletas revolucionaron el mundo de la pasteleria</a>.</p>
+      </div>
+      <div class="fl_right">
+        <h2 class="title">Conoce al equipo</h2>
+        <ul>
+          <li class="clear">
+            <div class="imgl"><img src="images/demo/xime.jpeg"  width="120" height="160"   alt=" " /></div>
+            <div class="teamember">
+              <p class="name">Isa</p>
+              <p>Lider del grupo
+                Cocinera
+                Creativa
+                Responsable
+                Amigable
+              </p>
+              <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+            </div>
+          </li>
+          <li class="clear last">
+            <div class="imgl"><img src="images/demo/pipe.jpeg"  width="120" height="160"  alt="" /></div>
+            <div class="teamember">
+              <p class="name">Pipe</p>
+              <p>Encargado de los domicilios
+                Creativo
+                Gentil
+                Empatico
+              </p>
+              <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+            </div>
+          </li>
+          <li class="clear last">
+            <div class="imgl"><img src="images/demo/val.jpeg"  width="120" height="160"   alt="" /></div>
+            <div class="teamember">
+              <p class="name">Tomis</p>
+              <p>Encargado de marketing y comercializacion de la marca
+                Inteligente
+                Trabajador
+                Soñador
+              
+              </p>
+              <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ####################################################################################################### --> 
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper">
+  <div id="footer">
+    <div class="verticaline clear">
+      <div class="box size1">
+        <h2>Keep in Touch</h2>
+        <p id="rss"><a href="#"><img src="layout/images/rss.gif" alt="" /></a></p>
+      </div>
+      <div class="box size2">
+        <address>
+        <strong class="title">DeliCookies</strong><br />
+        CBRB 
+        Bogota / Colombia<br />
+        </address>
+        <ul>
+          <li><strong class="title">Tel:</strong><br />
+            +57 3208121864</li>
+          <li><strong class="title">Email:</strong><br />
+            <a href="#">delicookies@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="box size3">
+        <ul>
+          <li><span>Instragram:   </span> <a href="#">  @isaa_j_ /  @23__ag___ / @juanfe.eche / </a></li>
+        </ul>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Suscribete para obtener descuentos imperdibles:</legend>
+            <input type="text" id="newsletter" value="Enter Email Here&hellip;" onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" />
+            <input type="image" id="subscribe" src="layout/images/submit.gif" alt="Submit" />
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper">
+  <div id="copyright" class="clear">
+    <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+  </div>
+</div>
+</body>
+</html>
